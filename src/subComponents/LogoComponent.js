@@ -16,7 +16,7 @@ display: inline-block;
 const LogoComponent = (props) => {
   return (
     <Logo color={props.theme}>
-      Vlab
+      dev
     </Logo>
   );
 };

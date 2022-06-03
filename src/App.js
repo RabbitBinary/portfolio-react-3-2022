@@ -7,6 +7,8 @@ import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import BlogPage from "./components/BlogPage";
 import AboutPage from "./components/AboutPage";
+import SoundBar from "./subComponents/SoundBar";
+import {AnimatePresence} from "framer-motion";
 
 function App() {
   return <>
@@ -14,6 +16,8 @@ function App() {
     <GlobalStyle/>
 
     <ThemeProvider theme={lightTheme}>
+      <SoundBar />
+      <AnimatePresence exitBeforeEnter>
       <Switch>
         <Route exact path="/" component={Main}/>
         <Route exact path="/about" component={AboutPage}/>
@@ -21,6 +25,7 @@ function App() {
         <Route exact path="/work" component={WorkPage}/>
         <Route exact path="/skills" component={MySkillsPage}/>
       </Switch>
+      </AnimatePresence>
     </ThemeProvider>
 
   </>
